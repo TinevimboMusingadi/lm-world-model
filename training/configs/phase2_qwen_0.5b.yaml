@@ -1,0 +1,18 @@
+run_name: "phase2-qwen0.5b-condB-seed42"
+phase: "phase2"
+condition: "B"                          # A | B | C
+
+model_name: "Qwen/Qwen2.5-0.5B-Instruct"
+data_file: "data/splits/phase2_train.jsonl"
+output_dir: "checkpoints/phase2_qwen0.5b_condB"
+
+# LoRA
+lora_r: 16
+lora_alpha: 32
+
+# Training
+epochs: 3
+batch_size: 4
+grad_accum: 4
+lr: 2.0e-4
+max_seq_len: 1024
